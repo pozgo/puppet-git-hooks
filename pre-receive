@@ -166,6 +166,7 @@ rm -rf "$tmptree"
 #summary
 if [[ $failures -ne 0 ]]; then
     echo -e "$(tput setaf 1)Error: $failures subhooks failed. Declining push.$(tput sgr0)"
+    echo -e "c`onsider using puppet-lint --fix file.pp to refactor code.`"
     exit 1
 fi
 
